@@ -3,7 +3,6 @@ import { DataSource } from './DataSource';
 import ConfigEditor from './views/ConfigEditor';
 import QueryEditor from './views/QueryEditor';
 import VariableQueryEditor from './views/VariableQueryEditor';
-import AnnotationCtrl from './annotations';
 import { GitHubQuery, GithubDataSourceOptions, GithubSecureJsonData } from './types';
 
 export const plugin = new DataSourcePlugin<DataSource, GitHubQuery, GithubDataSourceOptions, GithubSecureJsonData>(
@@ -11,5 +10,4 @@ export const plugin = new DataSourcePlugin<DataSource, GitHubQuery, GithubDataSo
 )
   .setConfigEditor(ConfigEditor)
   .setVariableQueryEditor(VariableQueryEditor)
-  .setQueryEditor(QueryEditor)
-  .setAnnotationQueryCtrl(AnnotationCtrl);
+  .setQueryEditor(QueryEditor);
